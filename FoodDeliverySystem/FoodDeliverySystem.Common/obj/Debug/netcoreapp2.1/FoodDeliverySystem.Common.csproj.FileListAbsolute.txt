@@ -1,0 +1,5 @@
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Common\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Common.deps.json
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Common\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Common.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Common\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Common.csproj.CoreCompileInputs.cache
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Common\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Common.AssemblyInfoInputs.cache
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Common\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Common.AssemblyInfo.cs
