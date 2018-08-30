@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Admin\Interfaces\" />
-    <Folder Include="Food\Interfaces\" />
+    <ProjectReference Include="..\FoodDeliverySystem.Models\FoodDeliverySystem.Models.csproj" />
   </ItemGroup>
 
 </Project>

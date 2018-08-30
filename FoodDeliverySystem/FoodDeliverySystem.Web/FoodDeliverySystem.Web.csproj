@@ -14,6 +14,14 @@
   <ItemGroup>
     <ProjectReference Include="..\FoodDeliverySystem.Common\FoodDeliverySystem.Common.csproj" />
     <ProjectReference Include="..\FoodDeliverySystem.Data\FoodDeliverySystem.Data.csproj" />
+    <ProjectReference Include="..\FoodDeliverySystem.Models\FoodDeliverySystem.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\" />
   </ItemGroup>
 
 </Project>

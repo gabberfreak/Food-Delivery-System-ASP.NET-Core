@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using ReactiveUI;
-using FoodDeliverySystem.Abstractions.ViewModels;
+using FoodDeliverySystem.Common.Admin.ViewModels;
 
 namespace FoodDeliverySystem.Admin.ViewModels
 {

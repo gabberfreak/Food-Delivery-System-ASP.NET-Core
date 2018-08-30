@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "508fee09cb0b1bef4c0f69eb83f783d485056cb7"
+    "signature": "b6105734a451c4120de35250e0fc6ee621c52c3d"
   },
   "compilationOptions": {
     "defines": [
@@ -24,7 +24,10 @@
     ".NETCoreApp,Version=v2.1": {
       "FoodDeliverySystem.Web/1.0.0": {
         "dependencies": {
+          "AutoMapper": "7.0.1",
+          "FoodDeliverySystem.Common": "1.0.0",
           "FoodDeliverySystem.Data": "1.0.0",
+          "FoodDeliverySystem.Models": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1"
@@ -34,6 +37,34 @@
         },
         "compile": {
           "FoodDeliverySystem.Web.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/1.2.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
+        }
+      },
+      "AutoMapper/7.0.1": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/AutoMapper.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -376,6 +407,38 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "ReactiveUI/8.7.2": {
+        "dependencies": {
+          "Splat": "4.0.2",
+          "System.Reactive": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/ReactiveUI.dll": {
+            "assemblyVersion": "8.7.0.0",
+            "fileVersion": "8.7.2.46079"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp2.0/ReactiveUI.dll": {}
+        }
+      },
+      "Splat/4.0.2": {
+        "dependencies": {
+          "System.Diagnostics.Contracts": "4.3.0",
+          "System.Drawing.Primitives": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Splat.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.2.54208"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Splat.dll": {}
+        }
+      },
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -499,6 +562,12 @@
           "lib/netstandard1.0/System.Composition.TypedParts.dll": {}
         }
       },
+      "System.Drawing.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
+        }
+      },
       "System.Linq.Parallel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -513,9 +582,44 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "FoodDeliverySystem.Data/1.0.0": {
+      "System.Reactive/4.0.0": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.398"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.ValueTuple/4.5.0": {},
+      "FoodDeliverySystem.Common/1.0.0": {
         "dependencies": {
           "FoodDeliverySystem.Models": "1.0.0",
+          "FoodDeliverySystem.Services": "1.0.0",
+          "ReactiveUI": "8.7.2"
+        },
+        "runtime": {
+          "FoodDeliverySystem.Common.dll": {}
+        },
+        "compile": {
+          "FoodDeliverySystem.Common.dll": {}
+        }
+      },
+      "FoodDeliverySystem.Data/1.0.0": {
+        "dependencies": {
+          "FoodDeliverySystem.Common": "1.0.0",
+          "FoodDeliverySystem.Models": "1.0.0",
+          "FoodDeliverySystem.Services": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
         },
@@ -528,6 +632,7 @@
       },
       "FoodDeliverySystem.Models/1.0.0": {
         "dependencies": {
+          "Ardalis.GuardClauses": "1.2.3",
           "Microsoft.AspNetCore.Identity": "2.1.1",
           "Microsoft.AspNetCore.Identity.UI": "2.1.1"
         },
@@ -536,6 +641,17 @@
         },
         "compile": {
           "FoodDeliverySystem.Models.dll": {}
+        }
+      },
+      "FoodDeliverySystem.Services/1.0.0": {
+        "dependencies": {
+          "FoodDeliverySystem.Models": "1.0.0"
+        },
+        "runtime": {
+          "FoodDeliverySystem.Services.dll": {}
+        },
+        "compile": {
+          "FoodDeliverySystem.Services.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -1784,7 +1900,7 @@
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Tasks.Parallel": "4.3.0",
           "System.Threading.Thread": "4.3.0",
-          "System.ValueTuple": "4.3.0",
+          "System.ValueTuple": "4.5.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath.XDocument": "4.3.0",
@@ -3371,14 +3487,6 @@
         },
         "compileOnly": true
       },
-      "System.ValueTuple/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
       "System.Xml.ReaderWriter/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -3488,6 +3596,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Ardalis.GuardClauses/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vbseGD73Uo7zqeX0vYyEVDv3EWn4AMA3X+D8otpxn5GLPeXQjkVIw/ITUMAzco72EAHDogy2T4UQtq99Dt8Pug==",
+      "path": "ardalis.guardclauses/1.2.3",
+      "hashPath": "ardalis.guardclauses.1.2.3.nupkg.sha512"
+    },
+    "AutoMapper/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6xHbhsW09sWjjYuE1sqhYn25PQzB6UEUVPME5uhlaIz2NR2+L3+FGbVxvknJKug1BLp6VTLxDb5RcGXKMm0ieQ==",
+      "path": "automapper/7.0.1",
+      "hashPath": "automapper.7.0.1.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
@@ -3615,6 +3737,20 @@
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
     },
+    "ReactiveUI/8.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OWmQHZQBXwOB86YiZhEK+hTrlzYLDQngGCyKCcaJyVTfXg2uXS3FndQW3GOkB+dfSV1uPtdl0qoze9F+CTr8SQ==",
+      "path": "reactiveui/8.7.2",
+      "hashPath": "reactiveui.8.7.2.nupkg.sha512"
+    },
+    "Splat/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ltwg8P91PVMFX3FKIoZx9Xr9FAlW0F/V57b/0krbBkJwnO9jDHeBJKw4NJ/lYRWheB9Y3NZLUeatymq5HcWgKw==",
+      "path": "splat/4.0.2",
+      "hashPath": "splat.4.0.2.nupkg.sha512"
+    },
     "System.Composition/1.0.31": {
       "type": "package",
       "serviceable": true,
@@ -3657,6 +3793,13 @@
       "path": "system.composition.typedparts/1.0.31",
       "hashPath": "system.composition.typedparts.1.0.31.nupkg.sha512"
     },
+    "System.Drawing.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1QU/c35gwdhvj77fkScXQQbjiVAqIL3fEYn/19NE0CV/ic5TN5PyWAft8HsrbRd4SBLEoErNCkWSzMDc0MmbRw==",
+      "path": "system.drawing.primitives/4.3.0",
+      "hashPath": "system.drawing.primitives.4.3.0.nupkg.sha512"
+    },
     "System.Linq.Parallel/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3664,12 +3807,43 @@
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
+    "System.Reactive/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vv4/fY+iZbMa1fK2mnf5abqbhDUdW0NS5ryMU7sBqZqFWL65DpWHm3GWRYLa5v9WJQRruw1dI99GQWPu4L6sSg==",
+      "path": "system.reactive/4.0.0",
+      "hashPath": "system.reactive.4.0.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "FoodDeliverySystem.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "FoodDeliverySystem.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "FoodDeliverySystem.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FoodDeliverySystem.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5514,13 +5688,6 @@
       "sha512": "sha512-OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
       "path": "system.threading.thread/4.3.0",
       "hashPath": "system.threading.thread.4.3.0.nupkg.sha512"
-    },
-    "System.ValueTuple/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-cNLEvBX3d6MMQRZe3SMFNukVbitDAEpVZO17qa0/2FHxZ7Y7PpFRpr6m2615XYM/tYYYf0B+WyHNujqIw8Luwg==",
-      "path": "system.valuetuple/4.3.0",
-      "hashPath": "system.valuetuple.4.3.0.nupkg.sha512"
     },
     "System.Xml.ReaderWriter/4.3.0": {
       "type": "package",

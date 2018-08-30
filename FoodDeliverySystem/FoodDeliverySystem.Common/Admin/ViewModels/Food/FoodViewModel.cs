@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Input;
 using ReactiveUI;
-using FoodDeliverySystem.Abstractions.ViewModels;
-using FoodDeliverySystem.Common.DataTransferObjects;
+using FoodDeliverySystem.Common.Dtos;
+using FoodDeliverySystem.Common.Admin.ViewModels.Food;
 
 namespace FoodDeliverySystem.Admin.ViewModels.Food
 {

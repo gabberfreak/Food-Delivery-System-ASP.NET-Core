@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using FoodDeliverySystem.Admin.ViewModels;
+using FoodDeliverySystem.Common.Dtos;
 
 namespace FoodDeliverySystem.Web.Mapping
 {

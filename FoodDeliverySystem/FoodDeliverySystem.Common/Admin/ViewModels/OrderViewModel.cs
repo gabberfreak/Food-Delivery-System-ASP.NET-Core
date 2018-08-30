@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using ReactiveUI;
-using FoodDeliverySystem.Abstractions.ViewModels;
-using FoodDeliverySystem.Common.DataTransferObjects;
 using System;
 using System.Reactive.Linq;
 using FoodDeliverySystem.Admin.ViewModels.Food;
+using FoodDeliverySystem.Common.Admin.ViewModels;
+using FoodDeliverySystem.Common.Admin.ViewModels.Food;
 
 namespace FoodDeliverySystem.Admin.ViewModels
 {
@@ -13,7 +13,7 @@ namespace FoodDeliverySystem.Admin.ViewModels
         private decimal _quntity = 1;
         private string _totalPriceAnimated;
 
-        public OrderViewModel(IFoodViewModel food)
+        public OrderViewModel(Common.Admin.ViewModels.Food.IFoodViewModel foodViewModel, IFoodViewModel food)
         {
             Food = food;
 

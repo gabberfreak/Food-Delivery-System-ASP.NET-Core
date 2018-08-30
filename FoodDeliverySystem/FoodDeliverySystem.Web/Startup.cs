@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FoodDeliverySystem.Data;
+using FoodDeliverySystem.Models;
 
 namespace FoodDeliverySystem.Web
 {
@@ -37,22 +38,22 @@ namespace FoodDeliverySystem.Web
             services.AddDbContext<FoodDeliveryContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<FoodDeliveryContext>();
+            //services.AddDefaultIdentity<IdentityUser>()
+            //    .AddEntityFrameworkStores<FoodDeliveryContext>();
 
-            services.Configure<IdentityOptions>(options =>
-            {
-                options.Password = new PasswordOptions()
-                {
-                    RequiredLength = 4,
-                    RequiredUniqueChars = 0,
-                    RequireDigit = false,
-                    RequireLowercase = false,
-                    RequireNonAlphanumeric = false,
-                    RequireUppercase = false
-                };
-
-            });
+            services.AddIdentity<User, IdentityRole>(options =>
+             {
+                 options.Stores.MaxLengthForKeys = 128;
+                 options.Password.RequireDigit = false;
+                 options.Password.RequireLowercase = false;
+                 options.Password.RequireUppercase = false;
+                 options.Password.RequireNonAlphanumeric = false;
+                 options.Password.RequiredLength = 4;
+                 options.User.RequireUniqueEmail = true;
+             })
+                .AddEntityFrameworkStores<FoodDeliveryContext>()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -1,0 +1,12 @@
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.csprojAssemblyReference.cache
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.csproj.CoreCompileInputs.cache
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.AssemblyInfoInputs.cache
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.AssemblyInfo.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.deps.json
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Models.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Models.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Services\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Services.csproj.CopyComplete

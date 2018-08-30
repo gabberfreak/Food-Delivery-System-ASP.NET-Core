@@ -7,3 +7,10 @@ D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Data.pdb
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Data.dll
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Data.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Models.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Models.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\obj\Debug\netcoreapp2.1\FoodDeliverySystem.Data.csproj.CopyComplete
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Common.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.dll
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Common.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Data\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.pdb

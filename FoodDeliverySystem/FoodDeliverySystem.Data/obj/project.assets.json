@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Ardalis.GuardClauses/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -1389,6 +1401,20 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "ReactiveUI/8.7.2": {
+        "type": "package",
+        "dependencies": {
+          "Splat": "4.0.2",
+          "System.Reactive": "4.0.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/ReactiveUI.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1617,6 +1643,20 @@
           }
         }
       },
+      "Splat/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.Contracts": "4.3.0",
+          "System.Drawing.Primitives": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Splat.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1726,6 +1766,18 @@
           }
         }
       },
+      "System.Diagnostics.Contracts/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Diagnostics.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.Diagnostics.Contracts.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1808,6 +1860,19 @@
         },
         "compile": {
           "ref/netstandard1.5/_._": {}
+        }
+      },
+      "System.Drawing.Primitives/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.1/System.Drawing.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/System.Drawing.Primitives.dll": {}
         }
       },
       "System.Dynamic.Runtime/4.3.0": {
@@ -2032,6 +2097,18 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
+      "System.Reactive/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
       "System.Reflection/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2246,6 +2323,18 @@
           }
         }
       },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {}
+        }
+      },
       "System.Runtime.Numerics/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2259,6 +2348,19 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
       "System.Security.AccessControl/4.5.0": {
@@ -2799,10 +2901,26 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "FoodDeliverySystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "FoodDeliverySystem.Models": "1.0.0",
+          "FoodDeliverySystem.Services": "1.0.0",
+          "ReactiveUI": "8.7.2"
+        },
+        "compile": {
+          "bin/placeholder/FoodDeliverySystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FoodDeliverySystem.Common.dll": {}
+        }
+      },
       "FoodDeliverySystem.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Ardalis.GuardClauses": "1.2.3",
           "Microsoft.AspNetCore.Identity": "2.1.0",
           "Microsoft.AspNetCore.Identity.UI": "2.1.0"
         },
@@ -2812,10 +2930,34 @@
         "runtime": {
           "bin/placeholder/FoodDeliverySystem.Models.dll": {}
         }
+      },
+      "FoodDeliverySystem.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "FoodDeliverySystem.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FoodDeliverySystem.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FoodDeliverySystem.Services.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Ardalis.GuardClauses/1.2.3": {
+      "sha512": "vbseGD73Uo7zqeX0vYyEVDv3EWn4AMA3X+D8otpxn5GLPeXQjkVIw/ITUMAzco72EAHDogy2T4UQtq99Dt8Pug==",
+      "type": "package",
+      "path": "ardalis.guardclauses/1.2.3",
+      "files": [
+        "ardalis.guardclauses.1.2.3.nupkg.sha512",
+        "ardalis.guardclauses.nuspec",
+        "lib/net40/Ardalis.GuardClauses.dll",
+        "lib/netstandard1.1/Ardalis.GuardClauses.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Antiforgery/2.1.0": {
       "sha512": "gXDOYdx/u/g12VckIErUcEgOvKb0623pgN1QeSqfO8UvGrm/eWHCVpynvQCJEVA8Ptw6e5x7yRmKs0xN2mk4FQ==",
       "type": "package",
@@ -4442,6 +4584,36 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "ReactiveUI/8.7.2": {
+      "sha512": "OWmQHZQBXwOB86YiZhEK+hTrlzYLDQngGCyKCcaJyVTfXg2uXS3FndQW3GOkB+dfSV1uPtdl0qoze9F+CTr8SQ==",
+      "type": "package",
+      "path": "reactiveui/8.7.2",
+      "files": [
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/monoandroid80/ReactiveUI.dll",
+        "lib/monoandroid80/ReactiveUI.xml",
+        "lib/net461/ReactiveUI.dll",
+        "lib/net461/ReactiveUI.xml",
+        "lib/netcoreapp2.0/ReactiveUI.dll",
+        "lib/netcoreapp2.0/ReactiveUI.xml",
+        "lib/netstandard2.0/ReactiveUI.dll",
+        "lib/netstandard2.0/ReactiveUI.xml",
+        "lib/tizen40/ReactiveUI.dll",
+        "lib/tizen40/ReactiveUI.xml",
+        "lib/uap10.0.16299/ReactiveUI.dll",
+        "lib/uap10.0.16299/ReactiveUI.pri",
+        "lib/uap10.0.16299/ReactiveUI.xml",
+        "lib/xamarinios10/ReactiveUI.dll",
+        "lib/xamarinios10/ReactiveUI.xml",
+        "lib/xamarinmac20/ReactiveUI.dll",
+        "lib/xamarinmac20/ReactiveUI.xml",
+        "lib/xamarintvos10/ReactiveUI.dll",
+        "lib/xamarintvos10/ReactiveUI.xml",
+        "reactiveui.8.7.2.nupkg.sha512",
+        "reactiveui.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -4706,6 +4878,30 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Splat/4.0.2": {
+      "sha512": "Ltwg8P91PVMFX3FKIoZx9Xr9FAlW0F/V57b/0krbBkJwnO9jDHeBJKw4NJ/lYRWheB9Y3NZLUeatymq5HcWgKw==",
+      "type": "package",
+      "path": "splat/4.0.2",
+      "files": [
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/monoandroid80/Splat.dll",
+        "lib/monoandroid80/Splat.pdb",
+        "lib/net461/Splat.dll",
+        "lib/net461/Splat.pdb",
+        "lib/netstandard2.0/Splat.dll",
+        "lib/netstandard2.0/Splat.pdb",
+        "lib/uap10.0.16299/Splat.dll",
+        "lib/uap10.0.16299/Splat.pdb",
+        "lib/uap10.0.16299/Splat.pri",
+        "lib/xamarinios10/Splat.dll",
+        "lib/xamarinios10/Splat.pdb",
+        "lib/xamarinmac20/Splat.dll",
+        "lib/xamarinmac20/Splat.pdb",
+        "splat.4.0.2.nupkg.sha512",
+        "splat.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -5141,6 +5337,64 @@
         "version.txt"
       ]
     },
+    "System.Diagnostics.Contracts/4.3.0": {
+      "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
+      "type": "package",
+      "path": "system.diagnostics.contracts/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Diagnostics.Contracts.dll",
+        "lib/netstandard1.0/System.Diagnostics.Contracts.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Diagnostics.Contracts.dll",
+        "ref/netcore50/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/de/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/es/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/fr/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/it/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ja/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ko/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/ru/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/zh-hans/System.Diagnostics.Contracts.xml",
+        "ref/netcore50/zh-hant/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/System.Diagnostics.Contracts.dll",
+        "ref/netstandard1.0/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/de/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/es/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/fr/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/it/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ja/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ko/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/ru/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/zh-hans/System.Diagnostics.Contracts.xml",
+        "ref/netstandard1.0/zh-hant/System.Diagnostics.Contracts.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Diagnostics.Contracts.dll",
+        "system.diagnostics.contracts.4.3.0.nupkg.sha512",
+        "system.diagnostics.contracts.nuspec"
+      ]
+    },
     "System.Diagnostics.Debug/4.3.0": {
       "sha512": "ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
       "type": "package",
@@ -5450,6 +5704,33 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tracing.4.3.0.nupkg.sha512",
         "system.diagnostics.tracing.nuspec"
+      ]
+    },
+    "System.Drawing.Primitives/4.3.0": {
+      "sha512": "1QU/c35gwdhvj77fkScXQQbjiVAqIL3fEYn/19NE0CV/ic5TN5PyWAft8HsrbRd4SBLEoErNCkWSzMDc0MmbRw==",
+      "type": "package",
+      "path": "system.drawing.primitives/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.Drawing.Primitives.dll",
+        "lib/netstandard1.1/System.Drawing.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Drawing.Primitives.dll",
+        "ref/netstandard1.1/System.Drawing.Primitives.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.drawing.primitives.4.3.0.nupkg.sha512",
+        "system.drawing.primitives.nuspec"
       ]
     },
     "System.Dynamic.Runtime/4.3.0": {
@@ -6174,6 +6455,26 @@
         "ref/xamarinwatchos10/_._",
         "system.objectmodel.4.3.0.nupkg.sha512",
         "system.objectmodel.nuspec"
+      ]
+    },
+    "System.Reactive/4.0.0": {
+      "sha512": "vv4/fY+iZbMa1fK2mnf5abqbhDUdW0NS5ryMU7sBqZqFWL65DpWHm3GWRYLa5v9WJQRruw1dI99GQWPu4L6sSg==",
+      "type": "package",
+      "path": "system.reactive/4.0.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.0.0.nupkg.sha512",
+        "system.reactive.nuspec"
       ]
     },
     "System.Reflection/4.3.0": {
@@ -6961,6 +7262,65 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "sha512": "J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "type": "package",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+        "system.runtime.interopservices.windowsruntime.nuspec"
+      ]
+    },
     "System.Runtime.Numerics/4.3.0": {
       "sha512": "yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ==",
       "type": "package",
@@ -7014,6 +7374,77 @@
         "ref/xamarinwatchos10/_._",
         "system.runtime.numerics.4.3.0.nupkg.sha512",
         "system.runtime.numerics.nuspec"
+      ]
+    },
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "type": "package",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.Runtime.Serialization.Primitives.dll",
+        "lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "ref/netcore50/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
+        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
+        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/de/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/es/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/fr/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/it/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ja/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ko/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/ru/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/System.Runtime.Serialization.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/System.Runtime.Serialization.Primitives.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
+        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.primitives.nuspec"
       ]
     },
     "System.Security.AccessControl/4.5.0": {
@@ -8235,15 +8666,27 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "FoodDeliverySystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../FoodDeliverySystem.Common/FoodDeliverySystem.Common.csproj",
+      "msbuildProject": "../FoodDeliverySystem.Common/FoodDeliverySystem.Common.csproj"
+    },
     "FoodDeliverySystem.Models/1.0.0": {
       "type": "project",
       "path": "../FoodDeliverySystem.Models/FoodDeliverySystem.Models.csproj",
       "msbuildProject": "../FoodDeliverySystem.Models/FoodDeliverySystem.Models.csproj"
+    },
+    "FoodDeliverySystem.Services/1.0.0": {
+      "type": "project",
+      "path": "../FoodDeliverySystem.Services/FoodDeliverySystem.Services.csproj",
+      "msbuildProject": "../FoodDeliverySystem.Services/FoodDeliverySystem.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "FoodDeliverySystem.Common >= 1.0.0",
       "FoodDeliverySystem.Models >= 1.0.0",
+      "FoodDeliverySystem.Services >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -8279,8 +8722,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Common\\FoodDeliverySystem.Common.csproj": {
+              "projectPath": "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Common\\FoodDeliverySystem.Common.csproj"
+            },
             "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Models\\FoodDeliverySystem.Models.csproj": {
               "projectPath": "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Models\\FoodDeliverySystem.Models.csproj"
+            },
+            "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Services\\FoodDeliverySystem.Services.csproj": {
+              "projectPath": "D:\\Projects\\CSharp Web\\ASP.NET Core\\Exams\\FoodDeliverySystem\\FoodDeliverySystem.Services\\FoodDeliverySystem.Services.csproj"
             }
           }
         }

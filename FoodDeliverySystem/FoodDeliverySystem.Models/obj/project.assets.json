@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Ardalis.GuardClauses/1.2.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Ardalis.GuardClauses.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -2638,6 +2650,17 @@
     }
   },
   "libraries": {
+    "Ardalis.GuardClauses/1.2.3": {
+      "sha512": "vbseGD73Uo7zqeX0vYyEVDv3EWn4AMA3X+D8otpxn5GLPeXQjkVIw/ITUMAzco72EAHDogy2T4UQtq99Dt8Pug==",
+      "type": "package",
+      "path": "ardalis.guardclauses/1.2.3",
+      "files": [
+        "ardalis.guardclauses.1.2.3.nupkg.sha512",
+        "ardalis.guardclauses.nuspec",
+        "lib/net40/Ardalis.GuardClauses.dll",
+        "lib/netstandard1.1/Ardalis.GuardClauses.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Antiforgery/2.1.0": {
       "sha512": "gXDOYdx/u/g12VckIErUcEgOvKb0623pgN1QeSqfO8UvGrm/eWHCVpynvQCJEVA8Ptw6e5x7yRmKs0xN2mk4FQ==",
       "type": "package",
@@ -7750,6 +7773,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Ardalis.GuardClauses >= 1.2.3",
       "Microsoft.AspNetCore.Identity >= 2.1.0",
       "Microsoft.AspNetCore.Identity.UI >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -7796,6 +7820,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Ardalis.GuardClauses": {
+            "target": "Package",
+            "version": "[1.2.3, )"
+          },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.1.0, )"

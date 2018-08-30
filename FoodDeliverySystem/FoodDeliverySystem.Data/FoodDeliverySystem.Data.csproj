@@ -5,12 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20180830181009_fixStuffs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FoodDeliverySystem.Common\FoodDeliverySystem.Common.csproj" />
     <ProjectReference Include="..\FoodDeliverySystem.Models\FoodDeliverySystem.Models.csproj" />
+    <ProjectReference Include="..\FoodDeliverySystem.Services\FoodDeliverySystem.Services.csproj" />
   </ItemGroup>
 
 </Project>

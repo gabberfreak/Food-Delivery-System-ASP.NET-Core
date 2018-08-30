@@ -1,11 +1,10 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using ReactiveUI;
-using FoodDeliverySystem.Abstractions;
 
 namespace FoodDeliverySystem.Admin.ViewModels
 {
     [ExcludeFromCodeCoverage]
-    public abstract class BaseViewModel : ReactiveObject, INavigatableViewModel
+    public abstract class BaseViewModel : ReactiveObject
     {
         private bool _isLoading;
 

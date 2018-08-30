@@ -7,54 +7,62 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FoodDeliverySystem.Data
 {
-    public class FoodDeliveryContext : IdentityDbContext
+    public class FoodDeliveryContext : IdentityDbContext<User>
     {
         public FoodDeliveryContext(DbContextOptions<FoodDeliveryContext> options)
              : base(options)
         {
         }
 
-        public virtual DbSet<Food> Foods { get; set; }
+        public virtual DbSet<Basket> Baskets { get; set; }
+
+        public virtual DbSet<CategoryItem> CategoryItems { get; set; }
+
+        public virtual DbSet<CategoryType> CategoryTypes { get; set; }
 
         public virtual DbSet<Order> Orders { get; set; }
 
-        public virtual DbSet<Category> Categories { get; set; }
-
         public virtual DbSet<OrderItem> OrderItems { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            builder.Entity<User>()
-                .HasOne(x => x.UserProfile)
-                .WithOne(x => x.User)
-                .HasForeignKey<UserProfile>(x => x.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            builder.Entity<CategoryItem>().ToTable("Category");
 
-            builder.Entity<Food>(b =>
-            {
-                b.HasMany<OrderItem>().WithOne().HasForeignKey(x => x.FoodId).IsRequired();
-            });
+            builder.Entity<CategoryItem>().Property(ci => ci.Id)
+                .IsRequired();
 
-            builder.Entity<OrderItem>(b =>
-            {
-                b.HasKey(oi => new { oi.FoodId, oi.OderId });
-                b.ToTable("OrderItems");
-            });
+            builder.Entity<CategoryItem>().Property(ci => ci.Name)
+                .IsRequired(true)
+                .HasMaxLength(50);
 
-            builder.Entity<Order>(b =>
-            {
-                b.HasOne<User>().WithMany(x => x.Orders).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.Cascade).IsRequired();
-                b.HasMany(x => x.OrderItems).WithOne().HasForeignKey(x => x.OderId).OnDelete(DeleteBehavior.Cascade);
-            });
+            builder.Entity<CategoryItem>().Property(ci => ci.Price)
+                .IsRequired(true);
 
-            builder.Entity<Category>(b =>
-            {
-                b.HasMany(x => x.Foods).WithOne(x => x.Category).HasForeignKey(x => x.CategoryId).OnDelete(DeleteBehavior.Cascade);
-                b.ToTable("Categories");
-            });
+            builder.Entity<CategoryItem>().Property(ci => ci.PictureUri)
+                .IsRequired(false);
+
+            builder.Entity<CategoryItem>().HasOne(ci => ci.CategoryType)
+                .WithMany()
+                .HasForeignKey(ci => ci.CategoryTypeId);
+
+
+            builder.Entity<CategoryType>().ToTable("CatalogType");
+
+            builder.Entity<CategoryType>().HasKey(ci => ci.Id);
+
+            builder.Entity<CategoryType>().Property(ci => ci.Id)
+               .IsRequired();
+
+            builder.Entity<CategoryType>().Property(cb => cb.Type)
+                .IsRequired()
+                .HasMaxLength(100);
+
+            builder.Entity<OrderItem>()
+                .OwnsOne(i => i.ItemOrdered);
+
+            builder.Entity<Order>().OwnsOne(o => o.ShipToAddress);
         }
     }
 }

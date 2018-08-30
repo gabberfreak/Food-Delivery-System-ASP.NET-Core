@@ -8,4 +8,15 @@
     <PackageReference Include="ReactiveUI" Version="8.7.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FoodDeliverySystem.Models\FoodDeliverySystem.Models.csproj" />
+    <ProjectReference Include="..\FoodDeliverySystem.Services\FoodDeliverySystem.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\newtonsoft.json\11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
