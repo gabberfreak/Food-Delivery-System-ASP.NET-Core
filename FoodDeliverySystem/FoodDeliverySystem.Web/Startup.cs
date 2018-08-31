@@ -13,6 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FoodDeliverySystem.Data;
 using FoodDeliverySystem.Models;
+using FoodDeliverySystem.Services.Interfaces;
+using FoodDeliverySystem.Services;
+using FoodDeliverySystem.Web.Services;
+using System.Text;
 
 namespace FoodDeliverySystem.Web
 {
@@ -23,6 +27,7 @@ namespace FoodDeliverySystem.Web
             Configuration = configuration;
         }
 
+        private IServiceCollection _services;
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -55,7 +60,20 @@ namespace FoodDeliverySystem.Web
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
+            services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
+
+            services.AddScoped<IBasketService, BasketService>();
+            services.AddScoped<IBasketViewModelService, BasketViewModelService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<CategoryService>();
+            services.Configure<CategorySettings>(Configuration);
+            services.AddSingleton<IUriComposer>(new UriComposer(Configuration.Get<CategorySettings>()));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            _services = services;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +82,7 @@ namespace FoodDeliverySystem.Web
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                ListAllRegisteredServices(app);
                 app.UseDatabaseErrorPage();
             }
             else
@@ -78,12 +97,29 @@ namespace FoodDeliverySystem.Web
 
             app.UseAuthentication();
 
-            app.UseMvc(routes =>
+            app.UseMvc();
+        }
+
+        private void ListAllRegisteredServices(IApplicationBuilder app)
+        {
+            app.Map("/allservices", builder => builder.Run(async context =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+                var sb = new StringBuilder();
+                sb.Append("<h1>All Services</h1>");
+                sb.Append("<table><thead>");
+                sb.Append("<tr><th>Type</th><th>Lifetime</th><th>Instance</th></tr>");
+                sb.Append("</thead><tbody>");
+                foreach (var svc in _services)
+                {
+                    sb.Append("<tr>");
+                    sb.Append($"<td>{svc.ServiceType.FullName}</td>");
+                    sb.Append($"<td>{svc.Lifetime}</td>");
+                    sb.Append($"<td>{svc.ImplementationType?.FullName}</td>");
+                    sb.Append("</tr>");
+                }
+                sb.Append("</tbody></table>");
+                await context.Response.WriteAsync(sb.ToString());
+            }));
         }
     }
 }
