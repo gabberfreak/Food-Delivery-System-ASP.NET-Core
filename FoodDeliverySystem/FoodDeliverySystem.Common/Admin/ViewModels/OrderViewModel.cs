@@ -1,65 +1,20 @@
 ﻿using System.Threading.Tasks;
-using ReactiveUI;
 using System;
-using System.Reactive.Linq;
-using FoodDeliverySystem.Admin.ViewModels.Food;
 using FoodDeliverySystem.Common.Admin.ViewModels;
-using FoodDeliverySystem.Common.Admin.ViewModels.Food;
+using System.Collections.Generic;
+using FoodDeliverySystem.Models;
 
-namespace FoodDeliverySystem.Admin.ViewModels
+namespace FoodDeliverySystem.Common.Admin.ViewModels
 {
-    public class OrderViewModel : ReactiveObject, IOrderViewModel
+    public class OrderViewModel
     {
-        private decimal _quntity = 1;
-        private string _totalPriceAnimated;
+        public int OrderNumber { get; set; }
+        public DateTime OrderDate { get; set; }
+        public decimal Total { get; set; }
+        public string Status { get; set; }
 
-        public OrderViewModel(Common.Admin.ViewModels.Food.IFoodViewModel foodViewModel, IFoodViewModel food)
-        {
-            Food = food;
+        public Address ShippingAddress { get; set; }
 
-            this.WhenAnyValue(x => x.Quantity)
-                .Select(_ => TotalPrice)
-                .Subscribe(async totalPrice =>
-                {
-                    var j = totalPrice - 15;
-                    j = j <= 0 ? 0 : j;
-                    for (var i = j; i <= totalPrice; i++)
-                    {
-                        await Task.Delay(5);
-                        TotalPriceAnimated = $"{i:C}";
-                    }
-                });
-        }
-
-        public OrderViewModel(IFoodViewModel food, decimal quntity)
-        {
-            Food = food;
-            Quantity = quntity;
-        }
-
-        public IFoodViewModel Food { get; }
-
-        public decimal Quantity
-        {
-            get => _quntity;
-            set
-            {
-                this.RaiseAndSetIfChanged(ref _quntity, value);
-                this.RaisePropertyChanged(nameof(TotalPrice));
-            }
-        }
-
-        public decimal TotalPrice => Quantity * Food.Price;
-
-        public string TotalPriceAnimated
-        {
-            get => _totalPriceAnimated;
-            set => this.RaiseAndSetIfChanged(ref _totalPriceAnimated, value);
-        }
-
-        public IOrderViewModel Clone()
-        {
-            return (IOrderViewModel)MemberwiseClone();
-        }
+        public List<OrderItemViewModel> OrderItems { get; set; } = new List<OrderItemViewModel>();
     }
 }

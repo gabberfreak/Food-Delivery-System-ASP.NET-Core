@@ -41,3 +41,15 @@ D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.dll
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Common.pdb
 D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\bin\Debug\netcoreapp2.1\FoodDeliverySystem.Services.pdb
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Lockout.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\LoginWith2fa.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Signin.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Basket\Checkout.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Basket\Index.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Category\Index.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Category\_pagination.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Category\_product.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Detail.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Order\Index.g.cshtml.cs
+D:\Projects\CSharp Web\ASP.NET Core\Exams\FoodDeliverySystem\FoodDeliverySystem.Web\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Basket\Default.g.cshtml.cs
